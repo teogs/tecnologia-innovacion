@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tienda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head>
+
+<body class="pagina-interna">
+
+<header class="header-interno">
+
+    <a href="index.html" class="btn-atras">
+        <img src="img/atras.svg" alt="Regresar">
+    </a>
+
+    <h1 class="titulo-header">
+        Tecnología e Innovación
+    </h1>
+
+</header>
+
+<section class="contenido-interno">
+
+    <div class="encabezado-tienda">
+        <h2 class="titulo-seccion">Tienda de Productos</h2>
+
+        <div class="carrito-header" onclick="abrirCarrito()">
+            🛒 <span id="contador">0</span>
+        </div>
+    </div>
+
+    <div class="productos-grid">
+
+        <div class="producto-card">
+            <h3>Mermelada</h3>
+            <img src="img/mermelada.jpg" class="img-producto">
+            <p class="precio">$35 MXN</p>
+            <p>Producto natural elaborado con frutas frescas.</p>
+            <button onclick="agregarProducto('Mermelada',35)">Agregar</button>
+        </div>
+
+        <div class="producto-card">
+            <h3>Papas de Camote</h3>
+            <img src="img/camote.jpg" class="img-producto">
+            <p class="precio">$25 MXN</p>
+            <p>Snack saludable y crujiente.</p>
+            <button onclick="agregarProducto('Papas de Camote',25)">Agregar</button>
+        </div>
+
+        <div class="producto-card">
+            <h3>Barra de Proteína</h3>
+            <img src="img/barra.jpg" class="img-producto">
+            <p class="precio">$60 MXN</p>
+            <p>Ideal para complementar tu energía diaria.</p>
+            <button onclick="agregarProducto('Barra de Proteína',60)">Agregar</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MODAL -->
+<div id="modalCarrito" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarCarrito()">×</span>
+        <h3>Carrito</h3>
+        <ul id="listaCarrito"></ul>
+        <p id="total"></p>
+        <button onclick="vaciarCarrito()">Vaciar</button>
+    </div>
+</div>
+
+<footer class="footer-interno">
+    <p>© 2026 Tecnología e Innovación</p>
+</footer>
+
+</body>
+</html>
