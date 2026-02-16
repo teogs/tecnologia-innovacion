@@ -433,3 +433,52 @@ body{
   font-size: 14px;
   color: #555;
 }
+
+/* ===== SECCIÓN NOSOTROS ===== */
+
+.contenedor-nosotros {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card-nosotros {
+    background: white;
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card-nosotros img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card-nosotros h3 {
+    margin-bottom: 10px;
+}
+
+.card-nosotros p {
+    font-size: 14px;
+}
+
+/* 🔥 RESPONSIVE NOSOTROS */
+@media (max-width: 768px) {
+
+    .contenedor-nosotros {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-nosotros {
+        width: 90%;
+        max-width: 350px;
+    }
+}
